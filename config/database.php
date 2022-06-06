@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION_LOCAL', 'pgsqlLocal'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,9 +65,9 @@ return [
             ]) : [],
         ],
 
-        /* 'pgsql' => [
+        'pgsqlLocal' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
+            'url' => env('DATABASE_URL_LOCAL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -78,9 +78,9 @@ return [
             'prefix_indexes' => true,
             'search_path' => 'public',
             'sslmode' => 'prefer',
-        ], */
+        ],
 
-        'pgsql' => [
+        'pgsqlHeroku' => [
             'driver' => 'pgsql',
             'host' => $DATABASE_URL["host"],
             'port' => $DATABASE_URL["port"],
