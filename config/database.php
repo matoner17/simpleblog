@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION_LOCAL', 'pgsqlLocal'),
+    'default' => env('DB_CONNECTION_LOCAL', 'pgsqlHeroku'),
 
     /*
     |--------------------------------------------------------------------------
